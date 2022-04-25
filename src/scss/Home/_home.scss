@@ -1,0 +1,75 @@
+.header_container {
+    display: flex;
+}
+
+.hero_img {
+    background: url('/assets/Home-Hero-Image.jpg');
+    width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: -480px 0;
+    background-size: auto 100%;
+}
+
+.header_wrapper {
+    width: 50%;
+    margin-right: 7.5vw;
+    margin-top: $margin-main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menus {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.login_menu {
+    display: flex;
+    flex: row;
+}
+.login_menu_element {
+    padding: $padding-main/2 $padding-main;
+    text-decoration: none;
+    color: $color-lightgray;
+    font-size: 0.9rem;
+    border: 0.75px solid white;
+    &:hover {
+        border: 0.75px solid #FAD648;
+        transition: 0.5s;
+    }
+}
+
+.main_menu {
+    display: flex;
+    flex: row;
+}
+
+.main_menu_element {
+    padding: $padding-main/2 $padding-main;
+    font-size: 1rem;
+    border: 0.75px solid white;
+    color: $color-darkgray;
+    cursor: pointer;
+    &:hover {
+        border: 0.75px solid $color-darkgray;
+        transition: 0.5s;
+    }
+}
+
+.hero_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 25vh;
+    // margin-left: $margin-main*3;
+}
+
+.start_helping {
+    display: flex;
+}
+

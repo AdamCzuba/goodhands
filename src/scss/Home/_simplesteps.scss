@@ -1,0 +1,57 @@
+.step_icon {
+    width: 83px;
+    height: 83px;
+}
+
+.simplesteps_title {
+    padding: $padding-main*3;
+    .decoration {
+        margin: $margin-main/2 0;
+    }
+}
+
+.simplesteps_content {
+    display: flex;
+    background-color: $color-gray;
+    height: 380px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.steps_guide_wrapper {
+    margin: $margin-main $margin-main*2;
+    color: $color-darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon1 {
+    background-image: url('/assets/Icon-1.svg');
+}
+
+.icon2 {
+    background-image: url('/assets/Icon-2.svg');
+}
+
+.icon3 {
+    background-image: url('/assets/Icon-3.svg');
+}
+
+.icon4 {
+    background-image: url('/assets/Icon-4.svg');
+}
+
+.step_move {
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: $padding-main;
+}
+
+.step_line {
+    border: 1px solid #707070;
+    width: 80px;
+    margin: $margin-main/6;
+}

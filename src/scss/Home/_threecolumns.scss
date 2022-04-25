@@ -1,0 +1,34 @@
+.columns_container {
+    background-image: url('/assets/columns-background.png');
+    background-size: contain;
+    height: 380px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-darkgray;
+}
+
+.stats_wrapper {
+    // margin: $padding-main*9;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+}
+
+
+.stats_number {
+    font-size: 5rem;
+}
+
+.stats_job {
+    font-weight: 800;
+    padding: $padding-main;
+}
+
+.stats_text {
+    width: 60%;
+    margin: $padding-main;
+    text-align: center;
+}

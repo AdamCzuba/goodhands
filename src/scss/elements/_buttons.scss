@@ -1,0 +1,19 @@
+.button {
+    width: 280px;
+    height: 120px;
+    text-decoration: none;
+    margin: $margin-main $margin-main/2;
+    padding: $padding-main;
+    color: $color-darkgray;
+    border: 0.75px solid $color-darkgray;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        transform: scale(105%);
+        transition: 0.5s;
+        border: 0.75px solid $color-yellow;
+    }
+}
