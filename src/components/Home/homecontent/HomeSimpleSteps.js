@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate, Link } from 'react-router-dom';
+import { Link as LinkScroll, animateScroll as Scroll } from "react-scroll";
 
 export default function HomeSimpleSteps() {
   return (
@@ -33,6 +35,9 @@ export default function HomeSimpleSteps() {
           <div className="step_description">kurier przyjedzie w dogodnym terminie</div>
         </div>
       </section>
+    <div className="simplesteps_button">
+    <Link className='button' to="/">ODDAJ<br/> RZECZY</Link>
+    </div>
     </>
   )
 }
