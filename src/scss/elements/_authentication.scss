@@ -1,0 +1,90 @@
+.auth_menu_container {
+    margin-right: 7.5vw;
+    margin-top: 2rem;
+
+
+}
+
+.signInForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: $margin-main*4;
+    align-items: center;
+
+    .header_login {
+        width: 350px;
+    }
+
+    .decoration {
+        margin: $margin-main 0;
+    }
+
+    input {
+        background-color: $color-gray;
+        border: none;
+        border-bottom: 1px solid #707070;
+
+    }
+}
+
+.login_section {
+    display: flex;
+    justify-content: center;
+
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_typer {
+    background-color: $color-gray;
+    width: 300px;
+    padding-bottom: $padding-main*2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    label {
+        align-self:center;
+        margin-top: $margin-main;
+        align-self: end;
+        width: 80%;
+    }
+}
+
+.login_buttons_container {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: $margin-main;
+
+}
+
+.login_button {
+    &:hover {
+        transition: 0.5s;
+    }
+}
+
+button[type="submit"] {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: $color-darkgray;
+}
+
+.hello_user {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: $margin-main/2;
+}

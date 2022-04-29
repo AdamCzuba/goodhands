@@ -54,3 +54,35 @@
 .fundation_list_wrapper {
     width: 60%;
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-family: $font-base;
+    padding: 0;
+}
+
+.page_item {
+    width: 40px;
+    height: 50px;
+    border: 0.75px solid white;
+    margin: $margin-main/2;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+
+    &:hover {
+        border: 0.75px solid #3C3C3C;
+        transition: 0.5s;
+    }
+}
