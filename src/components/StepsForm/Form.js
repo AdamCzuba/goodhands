@@ -6,15 +6,33 @@ import PackItems from "./PackItems";
 import PickFundation from './PickFundation';
 import PickItems from './PickItems';
 import Summary from './Summary';
+import { FormContext } from "./FormContext";
 
 export default function HomeHeader() {
+    //global values
+    const [type, setType] = useState('');
+    const [bags, setBags] = useState('');
+    const [localization, setLocalization] = useState('');
+    const [checkbox, setCheckbox] = useState(true);
+    const [helpGroups, setHelpGroups] = useState([]);
+    const [localizationSpecific, setLocalizationSpecific] = useState('');
 
+    const globals = {
+        type,
+        setType,
+        bags,
+        setBags,
+        localization,
+        setLocalization,
+        checkbox,
+        setCheckbox,
+        helpGroups,
+        setHelpGroups,
+        localizationSpecific,
+        setLocalizationSpecific
+    }
+    //local values
     const [page, setPage] = useState(0);
-
-    // const FormTitles = ["Zaznacz co chcesz oddać:", "Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:", "Lokalizacja:", "Podaj adres oraz termin odbioru rzeczy przez kuriera"];
-
-    let FormTitles = "Zaznacz co chcesz oddać:";
-    let ProgressBarText = "Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.";
 
     const PageDisplay = () => {
 
@@ -29,12 +47,9 @@ export default function HomeHeader() {
             case 3:
                 return <OrderDelivery />;
             case 4:
-                FormTitles = "Podsumowanie twojej darowizny";
-                ProgressBarText = "";
                 return <Summary />;
             default:
-                FormTitles = "Zaznacz co chcesz oddać:";
-                ProgressBarText = "Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.";
+                return <PickItems />;
         }
 
     }
@@ -58,19 +73,22 @@ export default function HomeHeader() {
                 </div>
             </section>
             <section className="form_container">
-                <PageDisplay />
-                <div className="form_footer">
-                    {page === 0 ? null : <buton
-                        onClick={() => {
-                            setPage((currPage) => currPage - 1);
-                        }} className="form_button">Wstecz</buton>}
-                    {page < 4 ? <buton
-                        onClick={() => {
-                            setPage((currPage) => currPage + 1);
-                        }} className="form_button">Dalej</buton> : null}
-                    {page === 4 ? <buton
-                        className="form_button">Potwierdzam</buton> : null}
-                </div>
+                <FormContext.Provider value={globals}>
+                    <PageDisplay />
+                    <div className="form_footer">
+                        {page === 0 ? null : <buton
+                            onClick={() => {
+                                setPage((currPage) => currPage - 1);
+                            }} className="form_button">Wstecz</buton>}
+                        {page < 4 ? <buton
+                            onClick={() => {
+                                setPage((currPage) => currPage + 1);
+                            }} className="form_button">Dalej</buton> : null}
+                        {page === 4 ? <buton
+                            className="form_button">Potwierdzam</buton> : null}
+                    </div>
+                </FormContext.Provider>
+
             </section>
         </>
 

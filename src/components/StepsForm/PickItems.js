@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { FormContext } from "./FormContext";
 
 
 function PickItems() {
 
-  const [type, setType] = useState('');
+  // const [type, setType] = useState('');
+  const {setType} = useContext(FormContext);
 
   const onChangeRadio = (e) => {
     setType(e.target.value);

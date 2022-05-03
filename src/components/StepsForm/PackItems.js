@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-
+import React, { useContext, useState } from "react";
+import { FormContext } from "./FormContext";
 
 function PackItems() {
 
-  const [bags, setBags] = useState('');
+  // const [bags, setBags] = useState('');
+  const {setBags} = useContext(FormContext);
 
   const onChangeOption = (e) => {
     setBags(e.target.value);

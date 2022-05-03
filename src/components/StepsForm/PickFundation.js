@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { FormContext } from "./FormContext";
 
 function PickFundation() {
 
-  const [localization, setLocalization] = useState('');
-  const [checkbox, setCheckbox] = useState(true);
-  const [helpGroups, setHelpGroups] = useState([]);
-  const [localizationSpecific, setLocalizationSpecific] = useState('');
+  // const [localization, setLocalization] = useState('');
+  // const [checkbox, setCheckbox] = useState(true);
+  // const [helpGroups, setHelpGroups] = useState([]);
+  // const [localizationSpecific, setLocalizationSpecific] = useState('');
+
+  const {localization} = useContext(FormContext);
+  const {setLocalization} = useContext(FormContext);
+  const {checkbox} = useContext(FormContext);
+  const {setCheckbox} = useContext(FormContext);
+  const {helpGroups} = useContext(FormContext);
+  const {setHelpGroups} = useContext(FormContext);
+  const {localizationSpecific} = useContext(FormContext);
+  const {setLocalizationSpecific} = useContext(FormContext);
+
+
 
   const onChangeOption = (e) => {
     setLocalization(e.target.value);
@@ -17,15 +29,15 @@ function PickFundation() {
   }
 
   function handleHelpGroups(e) {
-    const value =
+    const checkboxValue =
       e.target.type === "checkbox" ? e.target.checked : e.target.value;
       setCheckbox({
       ...checkbox,
-      [e.target.name]: value
+      [e.target.name]: checkboxValue
     });
-    console.log(value);
+    console.log(checkboxValue);
 
-    if ( value === true) {
+    if ( checkboxValue === true) {
       setHelpGroups([...helpGroups, e.target.value])
       // console.log(helpGroups)
     } else {

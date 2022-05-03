@@ -6,6 +6,9 @@ function OrderDelivery() {
   const [city, setCity] = useState('');
   const [postCode, setPostCode] = useState('');
   const [phone, setPhone] = useState('');
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+  const [note, setNote] = useState('');
 
   const onChangeStreet = (e) => {
     setStreet(e.target.value);
@@ -22,6 +25,21 @@ function OrderDelivery() {
     setPhone(e.target.value);
   }
 
+  const onChangeDate = (e) => {
+    setDate(e.target.value);
+    console.log(date);
+  }
+
+  const onChangeTime = (e) => {
+    setTime(e.target.value);
+    console.log(date);
+  }
+
+  const onChangeNote = (e) => {
+    setNote(e.target.value);
+    console.log(date);
+  }
+
   return (
     <div className="steps_form">
       <div className="form_tooltip">
@@ -34,37 +52,37 @@ function OrderDelivery() {
           <h3>Podaj adres oraz termin odbioru rzeczy przez kuriera:</h3>
         </div>
         <div className="form_body">
-            <div className='form_adress'>
-              <h4>Adres odbioru:</h4>
-              <label>Ulica
-                <input onChange={onChangeStreet} type="text"></input>
-              </label>
-              <label>Miasto
-                <input onChange={onChangeCity} type="text"></input>
-              </label>
-              <label> Kod pocztowy
-              <input onChange={onChangePostCode} type="text" pattern="^\d{2}-\d{3}$"/>
-              </label>
-              <label>
-                Numer telefonu
-                <input onChange={onChangePhone} type="tel"></input>
-              </label>
-            </div>
-            <div className='form_pickup_time'>
+          <div className='form_adress'>
+            <h4>Adres odbioru:</h4>
+            <label>Ulica
+              <input onChange={onChangeStreet} type="text"></input>
+            </label>
+            <label>Miasto
+              <input onChange={onChangeCity} type="text"></input>
+            </label>
+            <label> Kod pocztowy
+              <input onChange={onChangePostCode} type="text" pattern="^\d{2}-\d{3}$" />
+            </label>
+            <label>
+              Numer telefonu
+              <input onChange={onChangePhone} type="tel"></input>
+            </label>
+          </div>
+          <div className='form_pickup_time'>
             <h4>Termin odbioru:</h4>
             <label>
               Data
-              <input type="date"></input>
+              <input onChange={onChangeDate} type="date"></input>
             </label>
             <label>
               Godzina
-            <input type="time"/>
+              <input onChange={onChangeTime} type="time" />
             </label>
             <label>
               Uwagi dla kuriera
-              <textarea></textarea>
+              <textarea onChange={onChangeNote}></textarea>
             </label>
-            </div>
+          </div>
         </div>
       </div>
     </div>
