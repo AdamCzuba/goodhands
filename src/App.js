@@ -4,6 +4,7 @@ import Home from './components/Home';
 import { AuthProvider } from './components/Authentication/authcontext';
 import Login from './components/Authentication/Login';
 import Signup from "./components/Authentication/Signup";
+import Form from "./components/StepsForm/Form";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           < Route exact path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/oddaj-rzeczy" element={<Form />} />
         </Routes>
       </AuthProvider>
 

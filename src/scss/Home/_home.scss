@@ -12,6 +12,15 @@
     background-size: auto 100%;
 }
 
+.form_hero_img {
+    @extend .hero_img;
+    background: url('/assets/Form-Hero-Image.jpg');
+    height: 90vh;
+    -webkit-box-shadow: inset -47px -14px 42px -11px rgba(255, 255, 255, 1);
+    -moz-box-shadow: inset -47px -14px 42px -11px rgba(255, 255, 255, 1);
+    box-shadow: inset -47px -14px 42px -11px rgba(255, 255, 255, 1);
+}
+
 .header_wrapper {
     width: 50%;
     margin-right: 7.5vw;

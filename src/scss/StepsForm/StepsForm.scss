@@ -1,0 +1,25 @@
+.form_progressbar {
+    background-color: $color-yellow;
+}
+
+.form_wrapper {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_button {
+    padding: 30px;
+}
+
+.form_body {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio_picker {
+    display: flex;
+    flex-direction: column;
+}
