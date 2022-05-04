@@ -5,13 +5,15 @@ import { FormContext } from "./FormContext";
 function PickItems() {
 
   // const [type, setType] = useState('');
-  const {setType} = useContext(FormContext);
+  const {type, setType} = useContext(FormContext);
 
   const onChangeRadio = (e) => {
     setType(e.target.value);
     console.log(e.target.value);
 
   }
+
+
   return (
     <div className="steps_form">
       <div className="form_tooltip">

@@ -6,31 +6,31 @@ import PackItems from "./PackItems";
 import PickFundation from './PickFundation';
 import PickItems from './PickItems';
 import Summary from './Summary';
-import { FormContext } from "./FormContext";
+import { FormProvider } from "./FormContext";
 
 export default function HomeHeader() {
     //global values
-    const [type, setType] = useState('');
-    const [bags, setBags] = useState('');
-    const [localization, setLocalization] = useState('');
-    const [checkbox, setCheckbox] = useState(true);
-    const [helpGroups, setHelpGroups] = useState([]);
-    const [localizationSpecific, setLocalizationSpecific] = useState('');
+    // const [type, setType] = useState('');
+    // const [bags, setBags] = useState('');
+    // const [localization, setLocalization] = useState('');
+    // const [checkbox, setCheckbox] = useState(true);
+    // const [helpGroups, setHelpGroups] = useState([]);
+    // const [localizationSpecific, setLocalizationSpecific] = useState('');
 
-    const globals = {
-        type,
-        setType,
-        bags,
-        setBags,
-        localization,
-        setLocalization,
-        checkbox,
-        setCheckbox,
-        helpGroups,
-        setHelpGroups,
-        localizationSpecific,
-        setLocalizationSpecific
-    }
+    // const globals = {
+    //     type,
+    //     setType,
+    //     bags,
+    //     setBags,
+    //     localization,
+    //     setLocalization,
+    //     checkbox,
+    //     setCheckbox,
+    //     helpGroups,
+    //     setHelpGroups,
+    //     localizationSpecific,
+    //     setLocalizationSpecific
+    // }
     //local values
     const [page, setPage] = useState(0);
 
@@ -73,7 +73,7 @@ export default function HomeHeader() {
                 </div>
             </section>
             <section className="form_container">
-                <FormContext.Provider value={globals}>
+                <FormProvider>
                     <PageDisplay />
                     <div className="form_footer">
                         {page === 0 ? null : <buton
@@ -87,7 +87,7 @@ export default function HomeHeader() {
                         {page === 4 ? <buton
                             className="form_button">Potwierdzam</buton> : null}
                     </div>
-                </FormContext.Provider>
+                </FormProvider>
 
             </section>
         </>
