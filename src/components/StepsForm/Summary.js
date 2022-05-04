@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext, useState } from "react";
+import { FormContext } from "./FormContext";
+
+
 
 function Summary() {
+  const {type, setType} = useContext(FormContext);
   return (
     <div className="steps_form">
       <div className="form_wrapper">
@@ -8,7 +12,7 @@ function Summary() {
           <h3>Podsumowanie twojej darowizny</h3>
         </div>
         <div className="form_body">
-          pickitems
+          {type}
         </div>
       </div>
     </div>
