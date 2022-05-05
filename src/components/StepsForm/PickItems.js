@@ -13,6 +13,14 @@ function PickItems() {
 
   }
 
+  const inputs = [
+    'ubrania, które nadają się do ponownego użycia',
+    'ubrania, do wyrzucenia',
+    'zabawki',
+    'książki',
+    'inne'
+  ]
+
 
   return (
     <div className="steps_form">
@@ -27,11 +35,12 @@ function PickItems() {
         </div>
         <div className="form_body">
           <div className="radio_picker" onChange={onChangeRadio}>
-            <input type="radio" name='goods' value='ubrania, które nadają się do ponownego użycia' />ubrania, które nadają się do ponownego użycia
-            <input type="radio" name='goods' value='ubrania, do wyrzucenia' />ubrania, do wyrzucenia
-            <input type="radio" name='goods' value='zabawki' />zabawki
-            <input type="radio" name='goods' value='książki' />książki
-            <input type="radio" name='goods' value='inne' />inne
+            {inputs.map(el => (
+              <div key={el}>
+                <label>{el}</label>
+                <input type="radio" name='goods' value={el} checked={type === el} />
+                </div>
+            ))}
           </div>
 
         </div>

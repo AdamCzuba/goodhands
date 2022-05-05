@@ -6,7 +6,7 @@ export const FormContext = createContext();
 
 
 export function FormProvider({ children }) {
-    
+
     const [type, setType] = useState('');
     const [bags, setBags] = useState('');
     const [localization, setLocalization] = useState('');
