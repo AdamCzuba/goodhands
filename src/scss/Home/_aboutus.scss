@@ -8,6 +8,9 @@
 .aboutUs_container {
     width: 50%;
     background-color: $color-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .aboutUs_img {
